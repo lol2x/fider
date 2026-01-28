@@ -22,6 +22,7 @@
   "validation.custom.cannotdeleteduplicatepost": "无法删除此帖子，因为它被重复的帖子引用.",
   "validation.custom.unknownsettings": "未知的设置 '{name}'",
   "validation.custom.invalidemail": "'{email}' 不是有效的电子邮件地址.",
+  "validation.custom.disposableemail": "Disposable email addresses are not allowed. Please use a permanent email address.",
   "validation.custom.invalidurl": "'{url}' 不是有效的URL.",
   "validation.custom.invalidcustomdomain": "'{domain}' 不是有效的自定义域.",
   "validation.custom.customdomaintaken": "此自定义域已被其他人使用.",

@@ -22,6 +22,7 @@
   "validation.custom.cannotdeleteduplicatepost": "Αυτή η ανάρτηση δεν μπορεί να διαγραφεί, επειδή αναφέρεται σε μια διπλή ανάρτηση.",
   "validation.custom.unknownsettings": "Άγνωστες ρυθμίσεις με το όνομα '{name}'",
   "validation.custom.invalidemail": "Το '{email}' δεν είναι μια έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου.",
+  "validation.custom.disposableemail": "Disposable email addresses are not allowed. Please use a permanent email address.",
   "validation.custom.invalidurl": "Το '{url}' δεν είναι έγκυρη διεύθυνση URL.",
   "validation.custom.invalidcustomdomain": "'Το {domain}' δεν είναι ένας έγκυρος Προσαρμοσμένος τομέας.",
   "validation.custom.customdomaintaken": "Αυτός ο προσαρμοσμένος τομέας χρησιμοποιείται ήδη από κάποιον άλλο.",

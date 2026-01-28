@@ -22,6 +22,7 @@
   "validation.custom.cannotdeleteduplicatepost": "මෙම සටහන අනුපිටපත් කළ සටහනකින් යොමු කර ඇති බැවින් එය මකා දැමිය නොහැක.",
   "validation.custom.unknownsettings": "'{name}' ලෙස නම් කර ඇති නොදන්නා සැකසුම්",
   "validation.custom.invalidemail": "'{email}' වලංගු විද්‍යුත් තැපැල් ලිපිනයක් නොවේ.",
+  "validation.custom.disposableemail": "Disposable email addresses are not allowed. Please use a permanent email address.",
   "validation.custom.invalidurl": "'{url}' වලංගු URL එකක් නොවේ.",
   "validation.custom.invalidcustomdomain": "'{domain}' වලංගු අභිරුචි වසමක් නොවේ.",
   "validation.custom.customdomaintaken": "මෙම අභිරුචි වසම දැනටමත් වෙනත් අයෙකු විසින් භාවිතා කරයි.",

@@ -22,6 +22,7 @@
   "validation.custom.cannotdeleteduplicatepost": "این پست قابل حذف نیست زیرا توسط یک پست تکراری ارجاع داده شده است.",
   "validation.custom.unknownsettings": "تنظیمات ناشناخته با نام «{name}»",
   "validation.custom.invalidemail": "«{email}» یک آدرس ایمیل معتبر نیست.",
+  "validation.custom.disposableemail": "Disposable email addresses are not allowed. Please use a permanent email address.",
   "validation.custom.invalidurl": "«{url}» یک نشانی اینترنتی معتبر نیست.",
   "validation.custom.invalidcustomdomain": "«{domain}» یک دامنهٔ سفارشی معتبر نیست.",
   "validation.custom.customdomaintaken": "این دامنهٔ سفارشی قبلاً توسط شخص دیگری استفاده شده است.",

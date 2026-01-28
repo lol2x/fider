@@ -22,6 +22,7 @@
   "validation.custom.cannotdeleteduplicatepost": "لا يمكن حذف هذا المنشور لأنه مرتبط بمنشور مكرر.",
   "validation.custom.unknownsettings": "إعدادات غير معروفة '{name}'",
   "validation.custom.invalidemail": "{email}' ليس عنوان بريد إلكتروني صالح.",
+  "validation.custom.disposableemail": "Disposable email addresses are not allowed. Please use a permanent email address.",
   "validation.custom.invalidurl": "{url}' ليس عنوان URL صالح.",
   "validation.custom.invalidcustomdomain": "'{domain}' ليس نطاقًا مخصصًا صالحًا.",
   "validation.custom.customdomaintaken": "هذا النطاق المخصص مستخدم بالفعل من قبل شخص آخر.",

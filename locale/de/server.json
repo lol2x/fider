@@ -22,6 +22,7 @@
   "validation.custom.cannotdeleteduplicatepost": "Dieser Beitrag kann nicht gelöscht werden, da er von einem duplizierten Beitrag referenziert wird.",
   "validation.custom.unknownsettings": "Unbekannte Einstellungen mit dem Namen '{name}'",
   "validation.custom.invalidemail": "'{email}' ist keine gültige E-Mail-Adresse.",
+  "validation.custom.disposableemail": "Disposable email addresses are not allowed. Please use a permanent email address.",
   "validation.custom.invalidurl": "'{url}' ist keine gültige URL.",
   "validation.custom.invalidcustomdomain": "'{domain}' ist keine gültige benutzerdefinierte Domain.",
   "validation.custom.customdomaintaken": "Diese benutzerdefinierte Domain wird bereits von jemand anderem verwendet.",

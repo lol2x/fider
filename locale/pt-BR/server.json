@@ -22,6 +22,7 @@
   "validation.custom.cannotdeleteduplicatepost": "Esta postagem não pode ser excluída porque ela está sendo referenciada por uma postagem duplicada.",
   "validation.custom.unknownsettings": "Configuração '{name}' é desconhecida",
   "validation.custom.invalidemail": "'{email}' não é um endereço de e-mail válido.",
+  "validation.custom.disposableemail": "Disposable email addresses are not allowed. Please use a permanent email address.",
   "validation.custom.invalidurl": "'{url}' não é uma URL válida.",
   "validation.custom.invalidcustomdomain": "'{domain}' não é um domínio personalizado válido.",
   "validation.custom.customdomaintaken": "Este domínio personalizado já está em uso por outra pessoa.",

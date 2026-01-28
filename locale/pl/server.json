@@ -22,6 +22,7 @@
   "validation.custom.cannotdeleteduplicatepost": "Ten post nie może zostać usunięty, ponieważ jest do niego odniesienie ze zduplikowanego posta.",
   "validation.custom.unknownsettings": "Nie znaleziono ustawienia o nazwie '{name}'",
   "validation.custom.invalidemail": "'{email}' nie jest prawidłowym adresem email.",
+  "validation.custom.disposableemail": "Disposable email addresses are not allowed. Please use a permanent email address.",
   "validation.custom.invalidurl": "'{url}' nie jest prawidłowym adresem URL.",
   "validation.custom.invalidcustomdomain": "'{domain}' nie jest prawidłową Domeną Niestandardową.",
   "validation.custom.customdomaintaken": "Ta niestandardowa domena jest już wykorzystywana przez kogoś innego.",

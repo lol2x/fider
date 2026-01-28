@@ -22,6 +22,7 @@
   "validation.custom.cannotdeleteduplicatepost": "重複した投稿によって参照されているため、この投稿は削除できません。",
   "validation.custom.unknownsettings": "未知の設定名 '{name}'",
   "validation.custom.invalidemail": "'{email}' は有効なメールアドレスではありません。",
+  "validation.custom.disposableemail": "Disposable email addresses are not allowed. Please use a permanent email address.",
   "validation.custom.invalidurl": "'{url}' は有効な URL ではありません。",
   "validation.custom.invalidcustomdomain": "'{domain}' は有効なカスタムドメインではありません。",
   "validation.custom.customdomaintaken": "このカスタムドメインはすでに他のユーザーによって使用されています。",

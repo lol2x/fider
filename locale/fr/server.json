@@ -22,6 +22,7 @@
   "validation.custom.cannotdeleteduplicatepost": "Ce message ne peut pas être supprimé car il est référencé par un message dupliqué.",
   "validation.custom.unknownsettings": "Paramètre inconnu nommé '{name}'",
   "validation.custom.invalidemail": "'{email}' n'est pas une adresse e-mail valide.",
+  "validation.custom.disposableemail": "Disposable email addresses are not allowed. Please use a permanent email address.",
   "validation.custom.invalidurl": "'{url}' n'est pas une URL valide.",
   "validation.custom.invalidcustomdomain": "'{domain}' n'est pas un domaine personnalisé valide.",
   "validation.custom.customdomaintaken": "Ce domaine personnalisé est déjà utilisé par quelqu'un d'autre.",

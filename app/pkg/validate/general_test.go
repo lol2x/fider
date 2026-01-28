@@ -44,6 +44,36 @@ func TestValidEmail(t *testing.T) {
 	}
 }
 
+func TestDisposableEmail(t *testing.T) {
+	RegisterT(t)
+
+	for _, email := range []string{
+		"test@mailinator.com",
+		"test@guerrillamail.com",
+		"test@yopmail.com",
+		"test@trashmail.com",
+		"test@temp-mail.org",
+		"test@sharklasers.com",
+	} {
+		messages := validate.Email(context.Background(), email)
+		Expect(len(messages) > 0).IsTrue()
+	}
+}
+
+func TestNonDisposableEmail(t *testing.T) {
+	RegisterT(t)
+
+	for _, email := range []string{
+		"user@gmail.com",
+		"user@outlook.com",
+		"user@company.org",
+		"user@example.com",
+	} {
+		messages := validate.Email(context.Background(), email)
+		Expect(messages).HasLen(0)
+	}
+}
+
 func TestInvalidURL(t *testing.T) {
 	RegisterT(t)
 

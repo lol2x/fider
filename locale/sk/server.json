@@ -22,6 +22,7 @@
   "validation.custom.cannotdeleteduplicatepost": "Tento príspevok nemožno odstrániť, pretože naň odkazuje duplicitný príspevok.",
   "validation.custom.unknownsettings": "Sú pomenované neznáme nastavenia '{name}'",
   "validation.custom.invalidemail": "'{email}' nie je platná emailová adresa.",
+  "validation.custom.disposableemail": "Disposable email addresses are not allowed. Please use a permanent email address.",
   "validation.custom.invalidurl": "'{url}' nie je platná adresa URL.",
   "validation.custom.invalidcustomdomain": "'{domain}' nie je platnou vlastnou doménou.",
   "validation.custom.customdomaintaken": "Túto vlastnú doménu už používa niekto iný.",

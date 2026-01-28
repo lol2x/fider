@@ -33,6 +33,11 @@ func Email(ctx context.Context, email string) []string {
 		)}
 	}
 
+	parts := strings.SplitN(email, "@", 2)
+	if len(parts) == 2 && IsDisposableEmailDomain(parts[1]) {
+		return []string{i18n.T(ctx, "validation.custom.disposableemail")}
+	}
+
 	return []string{}
 }
 

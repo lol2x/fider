@@ -22,6 +22,7 @@
   "validation.custom.cannotdeleteduplicatepost": "Dit bericht kan niet worden verwijderd, omdat het door een gedupliceerd bericht wordt verwezen.",
   "validation.custom.unknownsettings": "Onbekende instellingen met naam '{name}'",
   "validation.custom.invalidemail": "'{email}' is geen geldig e-mailadres.",
+  "validation.custom.disposableemail": "Disposable email addresses are not allowed. Please use a permanent email address.",
   "validation.custom.invalidurl": "'{url}' is geen geldige URL.",
   "validation.custom.invalidcustomdomain": "'{domain}' is geen geldig Eigen Domein.",
   "validation.custom.customdomaintaken": "Dit eigen domein is al in gebruik door iemand anders.",

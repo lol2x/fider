@@ -22,6 +22,7 @@
   "validation.custom.cannotdeleteduplicatepost": "Этот пост не может быть удалён, т.к. он упомянут в дубликате.",
   "validation.custom.unknownsettings": "Неизвестный параметр '{name}'",
   "validation.custom.invalidemail": "'{email}' не является действительным адресом электронной почты.",
+  "validation.custom.disposableemail": "Disposable email addresses are not allowed. Please use a permanent email address.",
   "validation.custom.invalidurl": "'{url}' не является действительным URL.",
   "validation.custom.invalidcustomdomain": "'{domain}' не является действительным доменом.",
   "validation.custom.customdomaintaken": "Этот домен уже используется кем-то.",

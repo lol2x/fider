@@ -22,6 +22,7 @@
   "validation.custom.cannotdeleteduplicatepost": "Questo post non può essere eliminato perché è referenziato da un post duplicato.",
   "validation.custom.unknownsettings": "Impostazioni sconosciute denominate '{name}'",
   "validation.custom.invalidemail": "\"{email}\" non è un indirizzo email valido.",
+  "validation.custom.disposableemail": "Disposable email addresses are not allowed. Please use a permanent email address.",
   "validation.custom.invalidurl": "'{url}' non è un URL valido.",
   "validation.custom.invalidcustomdomain": "'{domain}' non è un dominio personalizzato valido.",
   "validation.custom.customdomaintaken": "Questo dominio personalizzato è già in uso da qualcun altro.",

@@ -22,6 +22,7 @@
   "validation.custom.cannotdeleteduplicatepost": "Başka bir kopya ile ilişkili olduğu için bu öneri silinemiyor.",
   "validation.custom.unknownsettings": "Bilinmeyen ayar adı '{name}'",
   "validation.custom.invalidemail": "'{email}' geçerli bir e-posta adresi değil.",
+  "validation.custom.disposableemail": "Disposable email addresses are not allowed. Please use a permanent email address.",
   "validation.custom.invalidurl": "'{url}' geçerli bir URL değil.",
   "validation.custom.invalidcustomdomain": "'{domain}' geçerli bir Özel Domain değil.",
   "validation.custom.customdomaintaken": "Bu özel domain başkası tarafından kullanılıyor.",

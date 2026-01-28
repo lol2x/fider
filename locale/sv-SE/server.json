@@ -22,6 +22,7 @@
   "validation.custom.cannotdeleteduplicatepost": "Det här inlägget kan inte tas bort eftersom det refereras av ett inlägg som är en kopia.",
   "validation.custom.unknownsettings": "Okänd inställning '{name}'",
   "validation.custom.invalidemail": "\"{email}\" är inte en giltig e-postadress.",
+  "validation.custom.disposableemail": "Disposable email addresses are not allowed. Please use a permanent email address.",
   "validation.custom.invalidurl": "'{url}' är inte en giltig URL.",
   "validation.custom.invalidcustomdomain": "'{domain}' är inte en giltig egen domän.",
   "validation.custom.customdomaintaken": "Denna domän används redan av någon annan.",
