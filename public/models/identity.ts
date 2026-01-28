@@ -14,6 +14,7 @@ export interface Tenant {
   isEmailAuthAllowed: boolean
   isFeedEnabled: boolean
   isModerationEnabled: boolean
+  banDisposableEmails: boolean
   hasCommercialFeatures: boolean
 }
 

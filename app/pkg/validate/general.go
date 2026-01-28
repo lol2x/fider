@@ -6,11 +6,12 @@ import (
 	"regexp"
 	"strings"
 
+	"github.com/getfider/fider/app"
+	"github.com/getfider/fider/app/models/entity"
 	"github.com/getfider/fider/app/models/query"
 	"github.com/getfider/fider/app/pkg/bus"
-	"github.com/getfider/fider/app/pkg/i18n"
-
 	"github.com/getfider/fider/app/pkg/env"
+	"github.com/getfider/fider/app/pkg/i18n"
 )
 
 var emailRegex = regexp.MustCompile("^(((([a-zA-Z]|\\d|[!#\\$%&'\\*\\+\\-\\/=\\?\\^_`{\\|}~]|[\\x{00A0}-\\x{D7FF}\\x{F900}-\\x{FDCF}\\x{FDF0}-\\x{FFEF}])+(\\.([a-zA-Z]|\\d|[!#\\$%&'\\*\\+\\-\\/=\\?\\^_`{\\|}~]|[\\x{00A0}-\\x{D7FF}\\x{F900}-\\x{FDCF}\\x{FDF0}-\\x{FFEF}])+)*)|((\\x22)((((\\x20|\\x09)*(\\x0d\\x0a))?(\\x20|\\x09)+)?(([\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x7f]|\\x21|[\\x23-\\x5b]|[\\x5d-\\x7e]|[\\x{00A0}-\\x{D7FF}\\x{F900}-\\x{FDCF}\\x{FDF0}-\\x{FFEF}])|(\\([\\x01-\\x09\\x0b\\x0c\\x0d-\\x7f]|[\\x{00A0}-\\x{D7FF}\\x{F900}-\\x{FDCF}\\x{FDF0}-\\x{FFEF}]))))*(((\\x20|\\x09)*(\\x0d\\x0a))?(\\x20|\\x09)+)?(\\x22)))@((([a-zA-Z]|\\d|[\\x{00A0}-\\x{D7FF}\\x{F900}-\\x{FDCF}\\x{FDF0}-\\x{FFEF}])|(([a-zA-Z]|\\d|[\\x{00A0}-\\x{D7FF}\\x{F900}-\\x{FDCF}\\x{FDF0}-\\x{FFEF}])([a-zA-Z]|\\d|-|\\.|_|~|[\\x{00A0}-\\x{D7FF}\\x{F900}-\\x{FDCF}\\x{FDF0}-\\x{FFEF}])*([a-zA-Z]|\\d|[\\x{00A0}-\\x{D7FF}\\x{F900}-\\x{FDCF}\\x{FDF0}-\\x{FFEF}])))\\.)+(([a-zA-Z]|[\\x{00A0}-\\x{D7FF}\\x{F900}-\\x{FDCF}\\x{FDF0}-\\x{FFEF}])|(([a-zA-Z]|[\\x{00A0}-\\x{D7FF}\\x{F900}-\\x{FDCF}\\x{FDF0}-\\x{FFEF}])([a-zA-Z]|\\d|-|_|~|[\\x{00A0}-\\x{D7FF}\\x{F900}-\\x{FDCF}\\x{FDF0}-\\x{FFEF}])*([a-zA-Z]|[\\x{00A0}-\\x{D7FF}\\x{F900}-\\x{FDCF}\\x{FDF0}-\\x{FFEF}])))\\.?$")
@@ -33,9 +34,16 @@ func Email(ctx context.Context, email string) []string {
 		)}
 	}
 
-	parts := strings.SplitN(email, "@", 2)
-	if len(parts) == 2 && IsDisposableEmailDomain(parts[1]) {
-		return []string{i18n.T(ctx, "validation.custom.disposableemail")}
+	// Check disposable email domains if enabled (default: enabled when no tenant in context)
+	banDisposable := true
+	if tenant, ok := ctx.Value(app.TenantCtxKey).(*entity.Tenant); ok && tenant != nil {
+		banDisposable = tenant.BanDisposableEmails
+	}
+	if banDisposable {
+		parts := strings.SplitN(email, "@", 2)
+		if len(parts) == 2 && IsDisposableEmailDomain(parts[1]) {
+			return []string{i18n.T(ctx, "validation.custom.disposableemail")}
+		}
 	}
 
 	return []string{}

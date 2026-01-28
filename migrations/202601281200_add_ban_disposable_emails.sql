@@ -1,0 +1,1 @@
+ALTER TABLE tenants ADD COLUMN ban_disposable_emails BOOLEAN NOT NULL DEFAULT TRUE;

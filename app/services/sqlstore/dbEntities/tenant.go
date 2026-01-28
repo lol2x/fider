@@ -25,6 +25,7 @@ type Tenant struct {
 	IsFeedEnabled        bool   `db:"is_feed_enabled"`
 	PreventIndexing      bool   `db:"prevent_indexing"`
 	IsModerationEnabled  bool   `db:"is_moderation_enabled"`
+	BanDisposableEmails  bool   `db:"ban_disposable_emails"`
 	IsPro                bool   `db:"is_pro"`
 	HasPaddleSubscription bool  `db:"has_paddle_subscription"`
 }
@@ -62,6 +63,7 @@ func (t *Tenant) ToModel() *entity.Tenant {
 		IsFeedEnabled:         t.IsFeedEnabled,
 		PreventIndexing:       t.PreventIndexing,
 		IsModerationEnabled:   t.IsModerationEnabled,
+		BanDisposableEmails:   t.BanDisposableEmails,
 		HasCommercialFeatures: hasCommercialFeatures,
 	}
 

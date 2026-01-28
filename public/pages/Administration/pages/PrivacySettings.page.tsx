@@ -7,6 +7,7 @@ export interface PrivacySettingsPageState {
   isPrivate: boolean
   isFeedEnabled: boolean
   isModerationEnabled: boolean
+  banDisposableEmails: boolean
 }
 
 export default class PrivacySettingsPage extends AdminBasePage<any, PrivacySettingsPageState> {
@@ -22,15 +23,17 @@ export default class PrivacySettingsPage extends AdminBasePage<any, PrivacySetti
       isPrivate: Fider.session.tenant.isPrivate,
       isFeedEnabled: Fider.session.tenant.isFeedEnabled,
       isModerationEnabled: Fider.session.tenant.isModerationEnabled,
+      banDisposableEmails: Fider.session.tenant.banDisposableEmails,
     }
   }
 
-  private updatePrivacySettings = async (isPrivate: boolean, isFeedEnabled: boolean, isModerationEnabled?: boolean) => {
+  private updatePrivacySettings = async (isPrivate: boolean, isFeedEnabled: boolean, isModerationEnabled?: boolean, banDisposableEmails?: boolean) => {
     this.setState(
       {
         isPrivate,
         isFeedEnabled: isPrivate ? false : isFeedEnabled, // Disable feed if site is private
         isModerationEnabled: isModerationEnabled !== undefined ? isModerationEnabled : this.state.isModerationEnabled,
+        banDisposableEmails: banDisposableEmails !== undefined ? banDisposableEmails : this.state.banDisposableEmails,
       },
       async () => {
         const response = await actions.updateTenantPrivacy(this.state)
@@ -53,6 +56,10 @@ export default class PrivacySettingsPage extends AdminBasePage<any, PrivacySetti
     this.updatePrivacySettings(this.state.isPrivate, this.state.isFeedEnabled, enabled)
   }
 
+  private banDisposableEmailsToggle = async (enabled: boolean) => {
+    this.updatePrivacySettings(this.state.isPrivate, this.state.isFeedEnabled, undefined, enabled)
+  }
+
   public content() {
     return (
       <Form>
@@ -68,6 +75,13 @@ export default class PrivacySettingsPage extends AdminBasePage<any, PrivacySetti
           <p className="text-muted mt-1">
             This feature lets users access this site via a feed reader. <br /> When enabled, the site makes its posts and comments available using the ATOM
             format. Links to feeds and autodiscovery metadata are shown on the site.
+          </p>
+        </Field>
+        <Field label="Ban Disposable Emails">
+          <Toggle disabled={!Fider.session.user.isAdministrator} active={this.state.banDisposableEmails} onToggle={this.banDisposableEmailsToggle} />
+          <p className="text-muted mt-1">
+            When enabled, users will not be able to sign up or sign in using disposable/temporary email addresses. <br />
+            This helps prevent abuse from throwaway email services.
           </p>
         </Field>
         {/* Moderation requires commercial plan */}

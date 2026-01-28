@@ -23,6 +23,7 @@ type Tenant struct {
 	IsFeedEnabled       bool              `json:"isFeedEnabled"`
 	PreventIndexing     bool              `json:"preventIndexing"`
 	IsModerationEnabled      bool              `json:"isModerationEnabled"`
+	BanDisposableEmails      bool              `json:"banDisposableEmails"`
 	HasCommercialFeatures    bool              `json:"hasCommercialFeatures"`
 }
 
